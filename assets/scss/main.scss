@@ -1,0 +1,105 @@
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: 'Noto Sans JP',sans-serif;
+  color: $text-black;
+  background: $bg-orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+    width: 95%;
+    min-width: 767px;
+  }
+  @include mq(sm) {
+    width: 90vw;
+    min-width: 325px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.only-pc {
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.only-sp {
+  display: none;
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+.only-ss {
+  display: none;
+  @include mq(ss) {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0;
+  @include mq(sm) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  margin: 0;
+  @include mq(sm) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  @include mq(sm) {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  @include mq(sm) {
+    font-size: 16px;
+  }
+}
+
+p {
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  @include mq(sm) {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-black;
+}
+
+ul,li {
+  padding: 0;
+}

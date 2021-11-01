@@ -1,0 +1,19 @@
+//**ブレークポイント**//
+
+$breakpoints: (
+  'ss': 'screen and (max-width: 532px)',
+  'sm': 'screen and (max-width: 768px)',
+  'md': 'screen and (max-width: 1024px)'
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+$text-black: #161616;
+$text-white: #ffffff;
+$bg-orange: #ffab7b;
+$accent-green: #8af4f0;
+$accent-yellow: #d8c5f0;
